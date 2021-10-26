@@ -14,7 +14,7 @@ The pub/sub server stores the sent data in memory inside a hashtable
 """
 def sendToPublishServer(encodedData):
     url = "http://localhost:7001/sendData"
-    myData = {'1': encodedData}
+    myData = {'3': encodedData}
     print(encodedData[16:26])
     x = requests.post(url, json=myData)
     print(x)
