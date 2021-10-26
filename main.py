@@ -8,6 +8,10 @@ ID = [random.choice([-1,1]) for i in range(ID_SIZE)]
 
 app = Flask(__name__)
 
+"""
+Sends data to the pub/sub server hosted at URL: localhost:7001/sendData
+The pub/sub server stores the sent data in memory inside a hashtable
+"""
 def sendToPublishServer(encodedData):
     url = "http://localhost:7001/sendData"
     myData = {'1': encodedData}
